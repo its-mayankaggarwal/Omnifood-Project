@@ -1,0 +1,612 @@
+/* Header component */
+.logo {
+  height: 2.4rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* giving specific height because we want to make it sticky later on */
+  height: 8rem;
+  background-color: #fdf2e9;
+  padding: 0 4.8rem;
+}
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4.8rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+.btn-mobile-view {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.mobile-view-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.mobile-view-icon[name="close-outline"] {
+  display: none;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+/* Hero component */
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 9.6rem;
+  padding: 0 3.2rem;
+}
+.hero-img-box img {
+  width: 100%;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 2rem;
+}
+.delivered-img {
+  display: flex;
+}
+.delivered-img img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-img img:last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+}
+
+/* How it works section */
+
+.section-how {
+  padding: 9.6rem 0;
+  /* background-color: #fdf2e9; */
+}
+.img-app {
+  width: 35%;
+}
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+.number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  display: block;
+  color: #bbb;
+  margin-bottom: 1.6rem;
+}
+.step-description {
+  font-size: 2rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  max-width: 75ch;
+}
+.step-text-box {
+  align-self: center;
+}
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.feature-logo {
+  /* width: 15%; */
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 60%;
+}
+.feature-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  color: #888;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.feature-logo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Meals and diet section */
+
+.cards {
+  box-shadow: 0 2.4rem 3.2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  transition: all 0.4s;
+}
+.cards img {
+  max-width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.meals {
+  font-size: 2.4rem;
+}
+.cards:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 3.2rem 6.4rem 0 rgba(0, 0, 0, 0.075);
+}
+.meal-name {
+  font-weight: 500;
+  font-size: 2.6rem;
+}
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+.diet-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #e67e22;
+}
+.tags {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  letter-spacing: 0.75px;
+  color: #000;
+  border-radius: 10rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem 1.4rem 0;
+}
+.tag-1 {
+  background-color: #37b24d;
+}
+.tag-2 {
+  background-color: #82c91e;
+}
+.tag-3 {
+  background-color: #fab005;
+}
+.cards ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.cards li {
+  font-size: 2rem;
+}
+.section-meals-diet {
+  padding: 9.6rem 0;
+}
+.card-description {
+  padding: 3.2rem 4.8rem;
+}
+.diet {
+  padding: 1.6rem;
+}
+
+.diet .heading-tertiory {
+  margin-bottom: 3.2rem;
+}
+.diet-list li {
+  font-size: 2.4rem;
+  list-style: none;
+}
+.diet-list {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.recipe-link:link,
+.recipe-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  margin-top: 6.4rem;
+  color: #e67e22;
+  font-size: 2.2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.recipe-link:hover,
+.recipe-link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* Testimonials and Food Gallary */
+.section-test-gal {
+  margin: 9.6rem 0;
+  padding: 2.4rem;
+  background-color: #fdf2e9;
+}
+.test-gal {
+  align-items: center;
+  gap: 9.6rem;
+}
+.testimonial {
+  padding: 9.6rem 4.8rem;
+}
+.testimonial-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  letter-spacing: 0.25px;
+  margin-bottom: 2rem;
+}
+.foodie-name {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+.foodie-img {
+  width: 20%;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+.gal-img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.gal-img:hover {
+  transform: scale(1.1);
+}
+.gallary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.gal-img-box {
+  overflow: hidden;
+}
+/* Pricing section */
+
+.section-pricing {
+  padding: 4.8rem 0 9.6rem 0;
+}
+.price-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.price {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #333;
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  border: 3px solid #f5e3d2;
+  padding: 4.8rem 3.2rem;
+  border-radius: 1rem;
+}
+.dol-sign {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+.price-card-text {
+  padding: 5.2rem;
+}
+.info {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.offers-list {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.price-btn:link,
+.price-btn:visited {
+  font-size: 1.6rem;
+  padding: 1.2rem 3rem;
+}
+.best-deal {
+  border: none;
+  background-color: #f5e3d2;
+  position: relative;
+  overflow: hidden;
+}
+.best-deal::after {
+  content: "Best deal";
+  text-transform: uppercase;
+  background-color: yellow;
+  display: block;
+  padding: 0.8rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 5%;
+  right: -8%;
+  transform: rotate(45deg);
+}
+.price-container p:last-child {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  grid-column: 1/-1;
+  color: #666;
+  text-align: center;
+}
+/* feature sectionn */
+.section-features {
+  padding: 0 0 9.6rem 0;
+}
+.feature-icon {
+  width: 4.4rem;
+  height: 4.4rem;
+  color: #cf711f;
+  margin-bottom: 2.4rem;
+  padding: 1.2rem;
+  background-color: #f1d4bc;
+  border-radius: 50%;
+}
+.heading-tertiory {
+  margin-bottom: 1.4rem;
+}
+.feature-text {
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+/* section cta */
+
+.section-cta {
+  padding: 9.6rem 0;
+  margin-bottom: 4.8rem;
+}
+.cta {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  background-color: #ec8f3d;
+  box-shadow: 0 0 30px 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+}
+
+.img-box {
+  position: relative;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  overflow: hidden;
+}
+.img-box:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(221, 156, 98, 0.3),
+    rgba(221, 156, 98, 0.3)
+  );
+}
+
+.cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cta-text {
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  color: #45260a;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  align-items: end;
+}
+.label-comp {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #45260a;
+}
+.input {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  width: 90%;
+}
+.cta-box {
+  padding: 4.8rem;
+}
+.cta-box h2 {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+.cta-btn {
+  width: 90%;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #45260a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: all 0.5s;
+}
+.cta-btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+.cta-btn:active {
+  outline: 10px solid rgba(255, 255, 255, 0.51);
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 1rem rgba(230, 125, 34, 0.527);
+}
+.cta-box *:focus {
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.5);
+}
+/* Footer */
+
+.footer {
+  border-top: 1px solid #eae6e6;
+}
+.foot-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4.8rem;
+  color: #555;
+}
+.foot-box {
+  padding: 14.4rem 3.2rem 9.6rem 3.2rem;
+}
+.foot-box p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.element:link,
+.element:visited {
+  font-size: 1.6rem;
+  color: #555;
+  text-decoration: none;
+}
+.foot-box {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 4.8rem;
+}
+.foot-logo {
+  margin-bottom: 3.2rem;
+}
+.blk_1 {
+  margin-right: 2.4rem;
+}
+.blk_1 p {
+  font-size: 1.4rem;
+}
+.blk_2 {
+  justify-items: center;
+}
+.foot-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.spc {
+  gap: 4.8rem;
+}
+.comp-logo {
+  width: 24px;
+  height: 24px;
+  color: #777;
+}
+.comp-link {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 6.4rem;
+  margin-left: 0.4rem;
+}
